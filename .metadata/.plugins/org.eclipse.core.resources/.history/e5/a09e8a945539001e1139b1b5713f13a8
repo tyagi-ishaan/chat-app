@@ -1,0 +1,40 @@
+package com.brainmentors.chatapp.network;
+// thread == Worker 
+// Worker need a Job to Perform
+//For Job u give Runnable
+//Once job is created via Runnable so write the job logic a run fuction
+//Assign a job to a Thread/Worker
+
+//public class ServerWorker implements Runnable {
+
+public class ServerWorker extends Thread {
+	@Override
+	public void run() {
+		//Job to Perform
+		//Logic
+		for(int i=1; i<=5; i++) {
+			System.out.println("RUN I is "+i+" "+Thread.currentThread());
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+	}
+	public static void main(String[] args) {
+//		ServerWorker job = new ServerWorker();
+		ServerWorker worker = new ServerWorker();
+		worker.start();
+		//Assign the job to a Thread/Worker
+//		Thread worker = new Thread (job,"Worker1");
+//  	worker.start(); //Internally it call run ()
+		for(int j=1; j<=5; j++) {
+			System.out.println("main "+j+" "+Thread.currentThread());
+		}
+		
+	}
+
+
+}

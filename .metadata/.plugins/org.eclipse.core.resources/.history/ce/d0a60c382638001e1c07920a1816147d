@@ -1,0 +1,21 @@
+package com.brainmentors.chatapp.dao;
+
+import java.sql.Connection;
+import java.sql.Statement;
+
+import com.brainmentors.chatapp.dto.UserDTO;
+
+// USER CURD
+public class UserDAO {
+
+	//public int add(String userid, String password, byte age, String city, String phone, String email, String country, String state, Sring areaCpode, String stdCode) {
+		public int add(UserDTO userDTO) {
+			System.out.println("Rec "+userDTO.getUserid()+" "+userDTO.getPassword());
+			Connection connection = null;
+			Statement stmt = null; //query
+			connection = CommonDAO.createConnection();
+			return 0;
+		}
+	}
+
+ 

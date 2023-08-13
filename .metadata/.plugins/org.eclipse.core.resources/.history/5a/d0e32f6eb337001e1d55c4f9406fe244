@@ -1,0 +1,15 @@
+package com.brainmentors.chatapp.views;
+
+import javax.swing.JFrame;
+
+public class UserView extends JFrame {
+	public UserView() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setSize(400, 400);
+		setVisible(true);
+	}
+	public static void main(String[] args) {
+		UserView userView = new UserView();
+	} 
+
+}

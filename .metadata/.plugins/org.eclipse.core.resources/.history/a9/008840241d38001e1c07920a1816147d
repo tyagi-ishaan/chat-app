@@ -1,0 +1,5 @@
+package com.brainmentors.chatapp.dao;
+
+public class UserDAO {
+
+}

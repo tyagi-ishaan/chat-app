@@ -1,0 +1,75 @@
+package com.brainmentors.chatapp.views;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import java.awt.Color;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+import javax.swing.JPasswordField;
+import javax.swing.JButton;
+
+public class UserScreen extends JFrame{
+	private JTextField textField;
+	private JPasswordField passwordField;
+
+	
+	public static void main(String[] args) {
+		
+					UserScreen window = new UserScreen();
+					
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public UserScreen() {
+		setResizable(false);
+		setTitle("LOGIN");
+		getContentPane().setBackground(Color.WHITE);
+		getContentPane().setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("LOGIN");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 40));
+		lblNewLabel.setBounds(292, 10, 140, 58);
+		getContentPane().add(lblNewLabel);
+		
+		textField = new JTextField();
+		textField.setBounds(270, 135, 307, 38);
+		getContentPane().add(textField);
+		textField.setColumns(10);
+		
+		JLabel lblNewLabel_1 = new JLabel("Userid");
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 24));
+		lblNewLabel_1.setBounds(147, 135, 83, 38);
+		getContentPane().add(lblNewLabel_1);
+		
+		JLabel pwdlbl = new JLabel("password");
+		pwdlbl.setFont(new Font("Tahoma", Font.PLAIN, 24));
+		pwdlbl.setBounds(147, 210, 109, 38);
+		getContentPane().add(pwdlbl);
+		
+		passwordField = new JPasswordField();
+		passwordField.setBounds(270, 210, 307, 38);
+		getContentPane().add(passwordField);
+		
+		JButton loginbt = new JButton("Login");
+		loginbt.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		loginbt.setBounds(270, 279, 109, 38);
+		getContentPane().add(loginbt);
+		
+		JButton registerbt = new JButton("Register");
+		registerbt.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		registerbt.setBounds(468, 279, 109, 38);
+		getContentPane().add(registerbt);
+		setBackground(Color.WHITE);
+		setSize(733, 400);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setLocationRelativeTo(null);
+		setVisible(true);
+		
+	}
+}

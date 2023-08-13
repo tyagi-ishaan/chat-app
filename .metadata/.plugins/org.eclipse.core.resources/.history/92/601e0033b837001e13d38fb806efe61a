@@ -1,0 +1,63 @@
+package com.brainmentors.chatapp.views;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import java.awt.Color;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+import javax.swing.JPasswordField;
+
+public class UserScreen extends JFrame{
+	private JTextField textField;
+	private JPasswordField passwordField;
+
+	
+	public static void main(String[] args) {
+		
+					UserScreen window = new UserScreen();
+					
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public UserScreen() {
+		setResizable(false);
+		setTitle("LOGIN");
+		getContentPane().setBackground(Color.WHITE);
+		getContentPane().setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("LOGIN");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 40));
+		lblNewLabel.setBounds(346, 10, 140, 58);
+		getContentPane().add(lblNewLabel);
+		
+		textField = new JTextField();
+		textField.setBounds(319, 115, 242, 65);
+		getContentPane().add(textField);
+		textField.setColumns(10);
+		
+		JLabel lblNewLabel_1 = new JLabel("Userid");
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 24));
+		lblNewLabel_1.setBounds(202, 141, 87, 38);
+		getContentPane().add(lblNewLabel_1);
+		
+		JLabel pwdlbl = new JLabel("password");
+		pwdlbl.setFont(new Font("Tahoma", Font.PLAIN, 24));
+		pwdlbl.setBounds(180, 235, 109, 38);
+		getContentPane().add(pwdlbl);
+		
+		passwordField = new JPasswordField();
+		passwordField.setBounds(319, 224, 222, 46);
+		getContentPane().add(passwordField);
+		setBackground(Color.WHITE);
+		setBounds(100, 100, 833, 542);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+		
+	}
+}

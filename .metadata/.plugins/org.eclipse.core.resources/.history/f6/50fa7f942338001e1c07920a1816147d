@@ -1,0 +1,4 @@
+DRIVER=com.mysql.cj.jdbc.Driver
+CONNECTION_URL=jdbc:mysql://localhost:3306/chatbd
+USER_ID=root
+PASSWORD=tyagi

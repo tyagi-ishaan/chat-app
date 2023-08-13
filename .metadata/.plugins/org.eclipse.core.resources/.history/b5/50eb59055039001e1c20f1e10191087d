@@ -1,0 +1,27 @@
+package com.brainmentors.chatapp.network;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+import com.brainmentors.chatapp.utils.ConfigReader;
+
+public class Server {
+	ServerSocket serverSocket ;
+	public Server() throws IOException {
+		int PORT = Integer.parseInt(ConfigReader.getValue("PORTNO"));
+		serverSocket = new ServerSocket(PORT);
+		System.out.println("Server Started and waiting for the Client Connection...");
+		Socket socket = serverSocket.accept(); //handShaking
+		System.out.println("Client Joins the Server");
+		socket.close();
+	}
+	
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		Server server = new Server();
+
+	}
+
+}

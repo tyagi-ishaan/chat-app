@@ -1,0 +1,10 @@
+package com.brainmentors.chatapp.dto;
+
+public class UserDTO {
+	private String userid;
+	private char[] password;
+	public UserDTO(String userid, char[] password) {
+		this.userid = userid;
+		this.password = password;
+	}
+}

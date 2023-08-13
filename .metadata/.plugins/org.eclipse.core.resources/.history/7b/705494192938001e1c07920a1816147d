@@ -1,0 +1,26 @@
+package com.brainmentors.chatapp.dao;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import com.brainmentors.chatapp.dto.UserDTO;
+
+// USER CURD
+public class UserDAO {
+
+	//public int add(String userid, String password, byte age, String city, String phone, String email, String country, String state, Sring areaCpode, String stdCode) {
+		public int add(UserDTO userDTO) throws ClassNotFoundException, SQLException {
+			System.out.println("Rec "+userDTO.getUserid()+" "+userDTO.getPassword());
+			Connection connection = null;
+			Statement stmt = null; //query
+			connection = CommonDAO.createConnection(); //Step-1 Connection Create
+			//Step-2 We do Query
+			stmt = connection.createStatement();
+			// insert into users(userid, password) values('ram','ram123');
+			int record = stmt.executeUpdate("insert into users (userid, password) values('"+userDTO.getUserid()+"','"+new String(userDTO.getPassword())+"')"); //Insert, Delete, Update
+			return record;
+		}
+	}
+
+ 

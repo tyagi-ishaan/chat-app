@@ -1,0 +1,14 @@
+package com.brainmentors.chatapp.dao;
+
+import com.brainmentors.chatapp.dto.UserDTO;
+
+// USER CURD
+public class UserDAO {
+
+	//public int add(String userid, String password, byte age, String city, String phone, String email, String country, String state, Sring areaCpode, String stdCode) {
+		public int add(UserDTO userDTO) {
+			return 0;
+		}
+	}
+
+ 

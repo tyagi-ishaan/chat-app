@@ -1,0 +1,39 @@
+package com.brainmentors.chatapp.views;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import java.awt.Color;
+
+public class UserScreen extends JFrame{
+
+	
+	public static void main(String[] args) {
+		
+					UserScreen window = new UserScreen();
+					
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public UserScreen() {
+		setResizable(false);
+		setTitle("LOGIN");
+		getContentPane().setBackground(Color.WHITE);
+		getContentPane().setLayout(null);
+		setBackground(new Color(240, 240, 240));
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		
+		setBounds(100, 100, 480, 356);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+	}
+
+}

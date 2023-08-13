@@ -1,0 +1,5 @@
+DRIVER=com.mysql.cj.jdbc.Driver
+CONNECTION_URL=jdbc:mysql://localhost:3306/chatdb
+USER_ID=root
+PASSWORD=tyagi
+PORTNO=9999
